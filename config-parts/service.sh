@@ -25,4 +25,4 @@ set service mdns repeater interface 'eth1.42'
 
 # TFTP server
 set service tftp-server directory '/config/tftpboot'
-set service tftp-server listen-address 10.1.1.1
+set service tftp-server listen-address 10.1.0.1
