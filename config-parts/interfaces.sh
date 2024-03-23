@@ -2,7 +2,7 @@
 
 set interfaces ethernet eth0 description 'WAN - Cable'
 set interfaces ethernet eth0 hw-id 'a8:a1:59:c0:3c:32'
-set interfaces ethernet eth5 address 'dhcp'
+set interfaces ethernet eth0 address 'dhcp'
 
 set interfaces ethernet eth1 address '10.1.0.1/24'
 set interfaces ethernet eth1 description 'LAN'

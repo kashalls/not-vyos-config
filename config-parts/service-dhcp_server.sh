@@ -20,7 +20,7 @@ set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 
 # IoT VLAN
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT ping-check
-set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 default-router '10.1.3.1'
+set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 default-router '10.42.42.1'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 domain-name 'outsideour.casa'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 name-server '10.5.0.4'
@@ -95,7 +95,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-m
 # Trusted VLAN
 set service dhcp-server shared-network-name TRUSTED authoritative
 set service dhcp-server shared-network-name TRUSTED ping-check
-set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 default-router '10.1.2.1'
+set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 default-router '10.10.10.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 domain-name 'outsideour.casa'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 name-server '10.5.0.4'
