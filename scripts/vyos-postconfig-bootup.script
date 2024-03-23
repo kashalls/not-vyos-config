@@ -14,7 +14,7 @@ if [ -d "/home/kashall" ]; then
   email = vyos@outsideour.casa
   name = VyOS
 END
-  chown kashall:users /home/vyos/.gitconfig
+  chown kashall:users /home/kashall/.gitconfig
 
   tee -a /home/kashall/.bash_aliases <<END >/dev/null
 export SOPS_AGE_KEY_FILE=/config/secrets/age.key

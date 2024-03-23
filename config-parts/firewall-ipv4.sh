@@ -524,10 +524,10 @@ set firewall ipv4 name trusted-lan rule 999 log
 # From TRUSTED to LOCAL
 set firewall ipv4 name trusted-local default-action 'accept'
 set firewall ipv4 name trusted-local description 'From TRUSTED to LOCAL'
-set firewall ipv4 name trusted-lan rule 999 action 'drop'
-set firewall ipv4 name trusted-lan rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name trusted-lan rule 999 state invalid
-set firewall ipv4 name trusted-lan rule 999 log
+set firewall ipv4 name trusted-local rule 999 action 'drop'
+set firewall ipv4 name trusted-local rule 999 description 'Rule: drop_invalid'
+set firewall ipv4 name trusted-local rule 999 state invalid
+set firewall ipv4 name trusted-local rule 999 log
 
 # From TRUSTED to SERVERS
 set firewall ipv4 name trusted-servers default-action 'accept'
