@@ -3,7 +3,7 @@
 
 ; SOA Records
 $TTL 3600
-$ORIGIN 1.10.in-addr.arpa.
+$ORIGIN 10.in-addr.arpa.
 @ 3600 IN SOA gateway.outsideour.casa. gateway.outsideour.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
@@ -14,6 +14,9 @@ $ORIGIN 1.10.in-addr.arpa.
 
 ; NS Records
 @                          IN  NS gateway.outsideour.casa.
+
+; Reset origin
+$ORIGIN in-addr.arpa.
 
 ; LAN
 1.0.1.10                   IN  PTR  gateway.outsideour.casa.
