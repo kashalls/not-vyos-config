@@ -33,7 +33,7 @@ set service dhcp-server shared-network-name LAN ping-check
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 default-router '10.1.0.1'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 lease '86400'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.200'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.10'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping spiritweaver ip-address '10.1.0.2'
@@ -90,7 +90,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-m
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping miah mac-address 'e4:5f:01:50:40:31'
 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping fran ip-address '10.69.0.69'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping pikvm mac-address '04:7c:16:7a:2c:4a'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping fran mac-address '04:7c:16:7a:2c:4a'
 
 # Trusted VLAN
 set service dhcp-server shared-network-name TRUSTED authoritative
@@ -99,6 +99,6 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 default
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 domain-name 'outsideour.casa'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 name-server '10.5.0.4'
-set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 range 0 start '10.10.10.200'
+set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 range 0 start '10.10.10.10'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 range 0 stop '10.10.10.254'
 
