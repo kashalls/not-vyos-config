@@ -76,18 +76,18 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-m
 
 # AMD64 Talos Workers (Servers)
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping astro ip-address '10.69.0.6'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping astro mac-address 'd8:3a:dd:15:83:a9'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping astro mac-address '00:23:24:b0:30:0b'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping august ip-address '10.69.0.7'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping august mac-address 'e4:5f:01:50:40:31'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping august mac-address '6c:0b:84:a8:f8:94'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping delta ip-address '10.69.0.8'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping delta mac-address 'd8:3a:dd:17:f5:eb'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping delta mac-address '00:23:24:b0:30:47'
 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping jera ip-address '10.69.0.9'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping jera mac-address '9c:6b:00:04:d5:49'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping jera mac-address '00:23:24:b0:30:29'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping leafions ip-address '10.69.0.10'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping leafions mac-address 'd8:3a:dd:15:83:a9'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping leafions mac-address '6c:0b:84:a8:f9:25'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping miah ip-address '10.69.0.11'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping miah mac-address 'e4:5f:01:50:40:31'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping miah mac-address '00:23:24:9e:c2:fb'
 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping fran ip-address '10.69.0.69'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping fran mac-address '04:7c:16:7a:2c:4a'
