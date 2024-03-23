@@ -21,7 +21,7 @@ set container name bind volume cache mode 'rw'
 
 # dnsdist
 set container name dnsdist cap-add 'net-bind-service'
-set container name dnsdist environment TZ value 'Europe/Amsterdam'
+set container name dnsdist environment TZ value 'America/Los_Angeles'
 set container name dnsdist image 'docker.io/powerdns/dnsdist-18:1.8.3'
 set container name dnsdist arguments '--log-timestamps'
 set container name dnsdist memory '0'
@@ -70,7 +70,7 @@ set container name speedtest-exporter shared-memory '0'
 
 # onepassword-connect
 set container name onepassword-connect image 'docker.io/1password/connect-api:1.7.2'
-set container name onepassword-connect environment TZ value 'Europe/Amsterdam'
+set container name onepassword-connect environment TZ value 'America/Los_Angeles'
 set container name onepassword-connect memory '0'
 set container name onepassword-connect network containers address '10.5.0.5'
 set container name onepassword-connect shared-memory '0'
@@ -83,7 +83,7 @@ set container name onepassword-connect volume data mode 'rw'
 
 # onepassword-sync
 set container name onepassword-sync image 'docker.io/1password/connect-sync:1.7.2'
-set container name onepassword-sync environment TZ value 'Europe/Amsterdam'
+set container name onepassword-sync environment TZ value 'America/Los_Angeles'
 set container name onepassword-sync memory '0'
 set container name onepassword-sync shared-memory '0'
 set container name onepassword-sync network containers address '10.5.0.6'
