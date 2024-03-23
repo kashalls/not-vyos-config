@@ -549,6 +549,11 @@ set firewall ipv4 name trusted-containers rule 999 description 'Rule: drop_inval
 set firewall ipv4 name trusted-containers rule 999 state invalid
 set firewall ipv4 name trusted-containers rule 999 log
 
+# From TRUSTED to WAN
+set firewall ipv4 name trusted-wan default-action 'accept'
+set firewall ipv4 name trusted-wan description 'From TRUSTED to WAN'
+
+
 # From WAN to GUEST
 set firewall ipv4 name wan-guest default-action 'drop'
 set firewall ipv4 name wan-guest description 'From WAN to GUEST'
