@@ -553,7 +553,6 @@ set firewall ipv4 name trusted-containers rule 999 log
 set firewall ipv4 name trusted-wan default-action 'accept'
 set firewall ipv4 name trusted-wan description 'From TRUSTED to WAN'
 
-
 # From WAN to GUEST
 set firewall ipv4 name wan-guest default-action 'drop'
 set firewall ipv4 name wan-guest description 'From WAN to GUEST'
