@@ -44,8 +44,8 @@ set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN ping-check
 set service dhcp-server shared-network-name LAN shared-network-parameters 'zone outsideour.casa. { primary 10.5.0.3; key dhcpd; }'
 set service dhcp-server shared-network-name LAN shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.3; key dhcpd; }'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;outsideour.casa.&quot;;'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
+set service dhcp-server shared-network-name LAN shared-network-parameters 'ddns-domainname &quot;outsideour.casa.&quot;;'
+set service dhcp-server shared-network-name LAN shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 default-router '10.1.0.1'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 domain-name 'outsideour.casa'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 domain-search 'outsideour.casa'
