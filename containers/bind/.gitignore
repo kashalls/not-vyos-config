@@ -11,3 +11,4 @@
 !/config/zones/
 /config/zones/*
 !/config/zones/db.*
+!/config/*.key.tmpl

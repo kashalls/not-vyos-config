@@ -7,6 +7,13 @@
 
 # Global options
 set service dhcp-server global-parameters 'option system-arch code 93 = unsigned integer 16;'
+set service dhcp-server dynamic-dns-update
+set service dhcp-server host-decl-name
+set service dhcp-server global-parameters "key dhcpd { algorithm hmac-md5; secret ${SECRET_BIND_DHCPD_KEY}; };"
+set service dhcp-server global-parameters 'update-optimization off;'
+set service dhcp-server global-parameters 'update-conflict-detection off;'
+set service dhcp-server global-parameters 'allow client-updates;'
+set service dhcp-server global-parameters 'update-static-leases on;'
 
 # Guest VLAN
 set service dhcp-server shared-network-name GUEST authoritative
@@ -20,8 +27,13 @@ set service dhcp-server shared-network-name GUEST subnet 192.168.2.0/24 range 0 
 # IoT VLAN
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT ping-check
+set service dhcp-server shared-network-name IOT shared-network-parameters 'zone outsideour.casa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;outsideour.casa.&quot;;'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 default-router '10.42.42.1'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 domain-name 'outsideour.casa'
+set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 domain-search 'outsideour.casa'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 range 0 start '10.42.42.11'
@@ -30,11 +42,18 @@ set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 range 0 sto
 # LAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN ping-check
+set service dhcp-server shared-network-name LAN shared-network-parameters 'zone outsideour.casa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name LAN shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;outsideour.casa.&quot;;'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 default-router '10.1.0.1'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 domain-name 'outsideour.casa'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 domain-search 'outsideour.casa'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 lease '86400'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.10'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-controller 10.5.0.10;'
 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping spiritweaver ip-address '10.1.0.2'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping spiritweaver mac-address '74:83:c2:d0:71:39'
@@ -95,8 +114,13 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-m
 # Trusted VLAN
 set service dhcp-server shared-network-name TRUSTED authoritative
 set service dhcp-server shared-network-name TRUSTED ping-check
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone outsideour.casa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-domainname &quot;outsideour.casa.&quot;;'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 default-router '10.10.10.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 domain-name 'outsideour.casa'
+set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 domain-search 'outsideour.casa'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name TRUSTED subnet 10.10.10.0/24 range 0 start '10.10.10.10'
