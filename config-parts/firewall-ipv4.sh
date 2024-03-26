@@ -219,7 +219,7 @@ set firewall ipv4 name lan-wan default-action 'accept'
 set firewall ipv4 name lan-wan description 'From LAN to WAN'
 
 # From LOCAL to GUEST
-set firewall ipv4 name local-guest default-action 'drop'
+set firewall ipv4 name local-guest default-action 'accept'
 set firewall ipv4 name local-guest description 'From LOCAL to GUEST'
 set firewall ipv4 name local-guest default-log
 set firewall ipv4 name local-guest rule 999 action 'drop'
@@ -228,7 +228,7 @@ set firewall ipv4 name local-guest rule 999 state invalid
 set firewall ipv4 name local-guest rule 999 log
 
 # From LOCAL to IOT
-set firewall ipv4 name local-iot default-action 'drop'
+set firewall ipv4 name local-iot default-action 'accept'
 set firewall ipv4 name local-iot description 'From LOCAL to IOT'
 set firewall ipv4 name local-iot default-log
 set firewall ipv4 name local-iot rule 100 action 'accept'
@@ -245,7 +245,7 @@ set firewall ipv4 name local-iot rule 999 state invalid
 set firewall ipv4 name local-iot rule 999 log
 
 # From LOCAL to LAN
-set firewall ipv4 name local-lan default-action 'drop'
+set firewall ipv4 name local-lan default-action 'accept'
 set firewall ipv4 name local-lan description 'From LOCAL to LAN'
 set firewall ipv4 name local-lan default-log
 set firewall ipv4 name local-lan rule 999 action 'drop'
@@ -254,7 +254,7 @@ set firewall ipv4 name local-lan rule 999 state invalid
 set firewall ipv4 name local-lan rule 999 log
 
 # From LOCAL to SERVERS
-set firewall ipv4 name local-servers default-action 'drop'
+set firewall ipv4 name local-servers default-action 'accept'
 set firewall ipv4 name local-servers description 'From LOCAL to SERVERS'
 set firewall ipv4 name local-servers default-log
 set firewall ipv4 name local-servers rule 40 action 'accept'
@@ -297,7 +297,7 @@ set firewall ipv4 name local-containers rule 999 state invalid
 set firewall ipv4 name local-containers rule 999 log
 
 # From LOCAL to TRUSTED
-set firewall ipv4 name local-trusted default-action 'drop'
+set firewall ipv4 name local-trusted default-action 'accept'
 set firewall ipv4 name local-trusted description 'From LOCAL to TRUSTED'
 set firewall ipv4 name local-trusted default-log
 set firewall ipv4 name local-trusted rule 100 action 'accept'
@@ -326,7 +326,7 @@ set firewall ipv4 name local-wan default-action 'accept'
 set firewall ipv4 name local-wan description 'From LOCAL to WAN'
 
 # From SERVERS to GUEST
-set firewall ipv4 name servers-guest default-action 'drop'
+set firewall ipv4 name servers-guest default-action 'accept'
 set firewall ipv4 name servers-guest description 'From SERVERS to GUEST'
 set firewall ipv4 name servers-guest default-log
 set firewall ipv4 name servers-guest rule 999 action 'drop'
@@ -335,7 +335,7 @@ set firewall ipv4 name servers-guest rule 999 state invalid
 set firewall ipv4 name servers-guest rule 999 log
 
 # From SERVERS to IOT
-set firewall ipv4 name servers-iot default-action 'drop'
+set firewall ipv4 name servers-iot default-action 'accept'
 set firewall ipv4 name servers-iot description 'From SERVERS to IOT'
 set firewall ipv4 name servers-iot default-log
 set firewall ipv4 name servers-iot rule 100 action 'accept'
@@ -352,7 +352,7 @@ set firewall ipv4 name servers-iot rule 999 state invalid
 set firewall ipv4 name servers-iot rule 999 log
 
 # From SERVERS to LAN
-set firewall ipv4 name servers-lan default-action 'drop'
+set firewall ipv4 name servers-lan default-action 'accept'
 set firewall ipv4 name servers-lan description 'From SERVERS to LAN'
 set firewall ipv4 name servers-lan default-log
 set firewall ipv4 name servers-lan rule 999 action 'drop'
@@ -361,7 +361,7 @@ set firewall ipv4 name servers-lan rule 999 state invalid
 set firewall ipv4 name servers-lan rule 999 log
 
 # From SERVERS to LOCAL
-set firewall ipv4 name servers-local default-action 'drop'
+set firewall ipv4 name servers-local default-action 'accept'
 set firewall ipv4 name servers-local description 'From SERVERS to LOCAL'
 set firewall ipv4 name servers-local default-log
 set firewall ipv4 name servers-local rule 50 action 'accept'
@@ -414,7 +414,7 @@ set firewall ipv4 name servers-containers rule 999 state invalid
 set firewall ipv4 name servers-containers rule 999 log
 
 # From SERVERS to TRUSTED
-set firewall ipv4 name servers-trusted default-action 'drop'
+set firewall ipv4 name servers-trusted default-action 'accept'
 set firewall ipv4 name servers-trusted description 'From SERVERS to TRUSTED'
 set firewall ipv4 name servers-trusted default-log
 set firewall ipv4 name servers-trusted rule 999 action 'drop'
