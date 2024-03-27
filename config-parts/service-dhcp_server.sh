@@ -82,7 +82,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-p
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and (option user-class = &quot;iPXE&quot; or if substring (option vendor-class-identifier, 0, 9) = &quot;PXEClient&quot;) {'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0wsubnet-parameters '}'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '}'
 
 # Raspberry Talos Masters (Servers)
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping aspen ip-address '10.69.0.3'
