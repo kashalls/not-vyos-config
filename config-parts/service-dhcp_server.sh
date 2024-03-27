@@ -79,7 +79,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 range 0 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow bootp;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow booting;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'next-server 10.1.0.1;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option vendor-encapsulated-options = &quot;Raspberry Pi Boot&quot; {'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if option vendor-encapsulated-options = &quot;Raspberry Pi Boot&quot; {'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else if exists user-class and option user-class = &quot;iPXE&quot; {'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
