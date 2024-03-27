@@ -53,7 +53,7 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 lease '86400'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 name-server '10.5.0.4'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 start '10.1.0.10'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop '10.1.0.254'
-set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-controller 10.5.0.10;'
+set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 subnet-parameters 'option ubnt.unifi-controller 10.1.0.2;'
 
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping spiritweaver ip-address '10.1.0.2'
 set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 static-mapping spiritweaver mac-address '74:83:c2:d0:71:39'
@@ -79,11 +79,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 range 0 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow bootp;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow booting;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'next-server 10.1.0.1;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; or option arch = 00:00:00:44 {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '}'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; { filename &quot;http://10.5.0.8/boot.ipxe&quot;; } else { filename &quot;ipxe.efi&quot;; }'
 
 # Raspberry Talos Masters (Servers)
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping aspen ip-address '10.69.0.3'
