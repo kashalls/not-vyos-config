@@ -79,7 +79,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 range 0 
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow bootp;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow booting;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'next-server 10.1.0.1;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and (option user-class = &quot;iPXE&quot; or substring (option vendor-class-identifier, 0, 9) = &quot;PXEClient&quot;) {'
+# "PXEClient:Arch:00000:UNDI:002001" is the vendor-class-identifier that is unique to all Raspberry Pi Clients (tested 3B+ -> 4B 8GB)
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and (option user-class = &quot;iPXE&quot; or option vendor-class-identifier = &quot;PXEClient:Arch:00000:UNDI:002001&quot;) {'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else {'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
