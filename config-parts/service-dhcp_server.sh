@@ -86,7 +86,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 tftp-ser
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; { filename &quot;http://10.5.0.8/boot.ipxe&quot;; }'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:19 { filename &quot;ipxe-arm64.efi&quot;; }'
 # https://xunnanxu.github.io/2020/11/28/PXE-Boot-Diskless-Raspberry-Pi-4-With-Ubuntu-Ubiquiti-and-Synology-1-DHCP-Setup/
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:00 { filename &quot;ipxe-arm64.efi&quot;; option vendor-class-identifier &quot;PXEClient&quot;; option vendor-encapsulated-options &quot;Raspberry Pi Boot&quot;; }'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:00 { bootfile-name &quot;ipxe-arm64.efi&quot;; option vendor-class-identifier &quot;PXEClient&quot;; option vendor-encapsulated-options &quot;Raspberry Pi Boot&quot;; }'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else { filename &quot;ipxe.efi&quot;; }'
 
 # Raspberry Talos Masters (Servers)
