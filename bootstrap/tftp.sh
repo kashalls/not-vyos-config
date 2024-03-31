@@ -12,6 +12,6 @@ curl -o /tmp/raspi-tftp/rpi4-uefi-ipxe.zip https://github.com/rgl/rpi4-uefi-ipxe
 unzip -d /tmp/raspi-tftp/rpi4-uefi-ipxe tmp/raspi-tftp/rpi4-uefi-ipxe.zip
 cp /tmp/raspi-tftp/rpi4-uefi-ipxe/efi/boot/bootaa64.efi /config/tftpboot/ipxe-arm64.efi
 
-rm -rf /tmp/rasp-tftp
+rm -rf /tmp/raspi-tftp
 
 sudo chown -R tftp:tftp /config/tftpboot/
