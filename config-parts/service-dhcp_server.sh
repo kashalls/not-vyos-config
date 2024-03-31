@@ -7,6 +7,8 @@
 
 # Global options
 set service dhcp-server global-parameters 'option system-arch code 93 = unsigned integer 16;'
+set service dhcp-server global-parameters "option vendor-class-identifier code 60 = string;"
+set service dhcp-server global-parameters "option vendor-encapsulated-options code 43 = string;"
 set service dhcp-server dynamic-dns-update
 set service dhcp-server host-decl-name
 set service dhcp-server global-parameters "key dhcpd { algorithm hmac-md5; secret ${SECRET_BIND_DHCPD_KEY}; };"
@@ -82,7 +84,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-p
 # "PXEClient:Arch:00000:UNDI:002001" is the vendor-class-identifier that is unique to all Raspberry Pi Clients (tested 3B+ -> 4B 8GB)
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; { filename &quot;http://10.5.0.8/boot.ipxe&quot;; }'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:19 { filename &quot;ipxe-arm64.efi&quot;; }'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:00 { filename &quot;undionly.kpxe&quot;; }'
+# https://xunnanxu.github.io/2020/11/28/PXE-Boot-Diskless-Raspberry-Pi-4-With-Ubuntu-Ubiquiti-and-Synology-1-DHCP-Setup/
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:00 { filename &quot;undionly.kpxe&quot;; option vendor-class-identifier &quot;PXEClient&quot;; option vendor-encapsulated-options &quot;Raspberry Pi Boot   &quot;; }'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else { filename &quot;ipxe.efi&quot;; }'
 
 # Raspberry Talos Masters (Servers)
