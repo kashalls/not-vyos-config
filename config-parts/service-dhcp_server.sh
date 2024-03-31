@@ -80,15 +80,10 @@ set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-p
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'allow booting;'
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'next-server 10.1.0.1;'
 # "PXEClient:Arch:00000:UNDI:002001" is the vendor-class-identifier that is unique to all Raspberry Pi Clients (tested 3B+ -> 4B 8GB)
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;http://10.5.0.8/boot.ipxe&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else if option system-arch = 19 {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;ipxe-arm64.efi&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else if option system-arch = 0 {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;undionly.kpxe&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '} else {'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'filename &quot;ipxe.efi&quot;;'
-set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters '}'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'if exists user-class and option user-class = &quot;iPXE&quot; { filename &quot;http://10.5.0.8/boot.ipxe&quot;; }'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:19 { filename &quot;ipxe-arm64.efi&quot;; }'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else if option system-arch = 00:00 { filename &quot;undionly.kpxe&quot;; }'
+set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 subnet-parameters 'else { filename &quot;ipxe.efi&quot;; }'
 
 # Raspberry Talos Masters (Servers)
 set service dhcp-server shared-network-name SERVERS subnet 10.69.0.0/24 static-mapping aspen ip-address '10.69.0.3'
