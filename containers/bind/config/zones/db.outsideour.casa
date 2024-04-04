@@ -17,8 +17,11 @@ $ORIGIN outsideour.casa.
 
 ; LAN
 dreamweaver                       IN  A  10.1.0.1
+
+; Containers
 dns                               IN  A  10.5.0.3
 dnsdist                           IN  A  10.5.0.4
+onepassword-connect               IN  A  10.5.0.6
 matchbox                          IN  A  10.5.0.8
 
 ; SERVERS

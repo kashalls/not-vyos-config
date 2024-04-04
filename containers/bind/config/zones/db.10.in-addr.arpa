@@ -20,3 +20,9 @@ $ORIGIN in-addr.arpa.
 
 ; LAN
 1.0.1.10                      IN  PTR  dreamweaver.outsideour.casa
+
+; Containers
+3.0.5.10                      IN  PTR  dns.outsideour.casa
+4.0.5.10                      IN  PTR  dnsdist.outsideour.casa
+6.0.5.10                      IN  PTR  onepassword-connect.outsideour.casa
+8.0.5.10                      IN  PTR  matchbox.outsideour.casa
