@@ -24,5 +24,6 @@ $ORIGIN in-addr.arpa.
 ; Containers
 3.0.5.10                      IN  PTR  dns.outsideour.casa
 4.0.5.10                      IN  PTR  dnsdist.outsideour.casa
-6.0.5.10                      IN  PTR  onepassword-connect.outsideour.casa
+5.0.5.10                      IN  PTR  onepassword-connect.outsideour.casa
+6.0.5.10                      IN  PTR  onepassword-sync.outsideour.casa
 8.0.5.10                      IN  PTR  matchbox.outsideour.casa
