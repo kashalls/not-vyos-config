@@ -1,0 +1,82 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    "docker:enableMajor",
+    ":enablePreCommit"
+  ],
+  "timezone": "America/Los_Angeles",
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "commitBodyTable": true,
+  "rebaseWhen": "conflicted",
+  "platformCommit": true,
+  "regexManagers": [
+    {
+      "description": ["Generic Docker image Regex manager"],
+      "fileMatch": ["config-parts/.+\\.sh$"],
+      "matchStrings": [
+        "set container name .* image '?(?<depName>.*?):(?<currentValue>[^'\n]*=?)'?"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "automerge": true,
+      "automergeType": "branch",
+      "matchUpdateTypes": ["digest"],
+      "ignoreTests": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "automergeType": "branch",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "ignoreTests": true
+    },
+    {
+      "description": "1Password Connect images",
+      "groupName": "1password-connect",
+      "matchPackageNames": [
+        "docker.io/1password/connect-sync",
+        "docker.io/1password/connect-api"
+      ],
+      "matchDatasources": ["docker"],
+      "group": {"commitMessageTopic": "{{{groupName}}} group"},
+      "separateMinorPatch": true
+    },
+    {"matchDatasources": ["docker"], "commitMessageTopic": "image {{depName}}"},
+    {
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat",
+      "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "semanticCommitType": "feat",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "semanticCommitType": "fix",
+      "commitMessageExtra": "( {{currentVersion}} → {{newVersion}} )"
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "semanticCommitType": "chore",
+      "commitMessageExtra": "( {{currentDigestShort}} → {{newDigestShort}} )"
+    },
+    {"matchDatasources": ["docker"], "semanticCommitScope": "container"},
+    {"matchDatasources": ["helm"], "semanticCommitScope": "helm"},
+    {
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci",
+      "semanticCommitScope": "github-action"
+    }
+  ]
+}
