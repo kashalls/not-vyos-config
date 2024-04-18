@@ -41,6 +41,9 @@ set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 name-server
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 range 0 start '10.42.42.11'
 set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 range 0 stop '10.42.42.254'
 
+set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 static-mapping airgradient-office ip-address '10.42.42.10'
+set service dhcp-server shared-network-name IOT subnet 10.42.42.0/24 static-mapping airgradient-office mac-address 'ac:0b:fb:cf:96:d0'
+
 # LAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN ping-check
