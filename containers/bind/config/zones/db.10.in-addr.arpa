@@ -27,3 +27,9 @@ $ORIGIN in-addr.arpa.
 5.0.5.10                      IN  PTR  onepassword-connect.outsideour.casa
 6.0.5.10                      IN  PTR  onepassword-sync.outsideour.casa
 8.0.5.10                      IN  PTR  matchbox.outsideour.casa
+
+; IOT
+10.42.42.10                   IN  PTR  airgradient-office.outsideour.casa
+
+; SERVERS
+2.0.69.10                     IN  PTR  talos.outsideour.casa
