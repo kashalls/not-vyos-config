@@ -5,7 +5,8 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     "docker:enableMajor",
-    ":enablePreCommit"
+    ":enablePreCommit",
+	":semanticCommits"
   ],
   "timezone": "America/Los_Angeles",
   "dependencyDashboardTitle": "Renovate Dashboard",
