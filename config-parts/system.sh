@@ -12,10 +12,10 @@ set system name-server '1.1.1.1'
 set system sysctl parameter kernel.pty.max value '24000'
 
 set system syslog global facility all level info
-set system syslog host 10.69.69.111 facility kern level 'warning'
-set system syslog host 10.69.69.111 protocol 'tcp'
-set system syslog host 10.69.69.111 port '6001'
-set system syslog host 10.69.69.111 format 'octet-counted'
+set system syslog host 10.69.0.111 facility kern level 'warning'
+set system syslog host 10.69.0.111 protocol 'tcp'
+set system syslog host 10.69.0.111 port '6001'
+set system syslog host 10.69.0.111 format 'octet-counted'
 
 set system static-host-mapping host-name dreamweaver inet '10.1.0.1'
 

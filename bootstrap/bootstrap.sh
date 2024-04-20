@@ -3,9 +3,9 @@
 load /opt/vyatta/etc/config.boot.default
 
 ## Setup initial
-set interfaces ethernet eth0 description 'WAN - Cable'
-set interfaces ethernet eth0 address 'dhcp'
-set interfaces ethernet eth0 hw-id 'a8:a1:59:c0:3c:32'
+set interfaces ethernet eth2 description 'WAN - Cable'
+set interfaces ethernet eth2 address 'dhcp'
+set interfaces ethernet eth2 hw-id 'a8:a1:59:c0:3c:32'
 
 set interfaces ethernet eth1 description 'LAN'
 set interfaces ethernet eth1 address '10.1.0.1/24'
@@ -37,7 +37,7 @@ set service dhcp-server shared-network-name LAN subnet 10.1.0.0/24 range 0 stop 
 
 ## Setup NAT: ALL -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
-set nat source rule 100 outbound-interface name 'eth0'
+set nat source rule 100 outbound-interface name 'eth2'
 set nat source rule 100 source address '10.1.0.1/24'
 set nat source rule 100 translation address masquerade
 
