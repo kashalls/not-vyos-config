@@ -17,4 +17,3 @@ set firewall group address-group k8s_nodes address '10.69.0.3-10.69.0.11' # Serv
 
 # Multicast
 set firewall group port-group multicast-udp port '1900'
-set firewall group address-group k8s_vector_aggregator address '10.69.0.111'
