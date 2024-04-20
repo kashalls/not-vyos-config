@@ -23,7 +23,6 @@ set service ssh port '22'
 delete system host-name
 set system host-name 'dreamweaver'
 set system domain-name 'outsideour.casa'
-set system ipv6 disable-forwarding
 set system name-server '1.1.1.1'
 set system time-zone 'America/Los_Angeles'
 

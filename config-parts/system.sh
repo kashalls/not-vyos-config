@@ -3,8 +3,6 @@
 set system host-name 'dreamweaver'
 set system domain-name 'outsideour.casa'
 
-set system ipv6 disable-forwarding
-
 set system login user kashall authentication public-keys personal key 'AAAAC3NzaC1lZDI1NTE5AAAAIPZh6Rn2tQ5jbxP/TJXQTdxFymMuwSySThx/Xv6B40uv'
 set system login user kashall authentication public-keys personal type 'ssh-ed25519'
 delete system login user vyos
