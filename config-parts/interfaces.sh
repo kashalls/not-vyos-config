@@ -1,7 +1,7 @@
 #!/bin/vbash
 
 set interfaces ethernet eth0 description 'WAN - Cable'
-set interfaces ethernet eth0 hw-id 'a8:a1:59:c0:3c:32'
+set interfaces ethernet eth0 hw-id '58:11:22:4c:1d:10'
 set interfaces ethernet eth0 address 'dhcp'
 set interfaces ethernet eth0 address 'dhcpv6'
 set interfaces ethernet eth0 dhcpv6-options pd 0 length '60'
