@@ -126,13 +126,13 @@ set firewall zone containers from trusted firewall name 'trusted-containers'
 set firewall zone containers from wan firewall name 'wan-containers'
 
 # IPv6
-set firewall zone containers from guest firewall ipv6-name 'guest-containers'
-set firewall zone containers from iot firewall ipv6-name 'iot-containers'
-set firewall zone containers from lan firewall ipv6-name 'lan-containers'
-set firewall zone containers from local firewall ipv6-name 'local-containers'
-set firewall zone containers from servers firewall ipv6-name 'servers-containers'
-set firewall zone containers from trusted firewall ipv6-name 'trusted-containers'
-set firewall zone containers from wan firewall ipv6-name 'wan-containers'
+set firewall zone containers from guest firewall ipv6-name 'guest-containers-v6'
+set firewall zone containers from iot firewall ipv6-name 'iot-containers-v6'
+set firewall zone containers from lan firewall ipv6-name 'lan-containers-v6'
+set firewall zone containers from local firewall ipv6-name 'local-containers-v6'
+set firewall zone containers from servers firewall ipv6-name 'servers-containers-v6'
+set firewall zone containers from trusted firewall ipv6-name 'trusted-containers-v6'
+set firewall zone containers from wan firewall ipv6-name 'wan-containers-v6'
 
 ## Trusted
 set firewall zone trusted interface 'eth1.10'

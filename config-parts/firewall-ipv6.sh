@@ -65,18 +65,18 @@ set firewall ipv6 name guest-trusted-v6 rule 999 state invalid
 set firewall ipv6 name guest-trusted-v6 rule 999 log
 
 # From GUEST to WAN
-set firewall ipv6 name guest-wan default-action 'accept'
-set firewall ipv6 name guest-wan description 'From GUEST to WAN'
+set firewall ipv6 name guest-wan-v6 default-action 'accept'
+set firewall ipv6 name guest-wan-v6 description 'From GUEST to WAN'
 
 
 # From IOT to GUEST
-set firewall ipv6 name iot-guest default-action 'drop'
-set firewall ipv6 name iot-guest description 'From IOT to GUEST'
-set firewall ipv6 name iot-guest default-log
-set firewall ipv6 name iot-guest rule 999 action 'drop'
-set firewall ipv6 name iot-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name iot-guest rule 999 state invalid
-set firewall ipv6 name iot-guest rule 999 log
+set firewall ipv6 name iot-guest-v6 default-action 'drop'
+set firewall ipv6 name iot-guest-v6 description 'From IOT to GUEST'
+set firewall ipv6 name iot-guest-v6 default-log
+set firewall ipv6 name iot-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name iot-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name iot-guest-v6 rule 999 state invalid
+set firewall ipv6 name iot-guest-v6 rule 999 log
 
 # From IOT to LAN
 set firewall ipv6 name iot-lan-v6 default-action 'drop'
@@ -148,17 +148,17 @@ set firewall ipv6 name iot-trusted-v6 rule 999 state invalid
 set firewall ipv6 name iot-trusted-v6 rule 999 log
 
 # From IOT to WAN
-set firewall ipv6 name iot-wan default-action 'accept'
-set firewall ipv6 name iot-wan description 'From IOT to WAN'
+set firewall ipv6 name iot-wan-v6 default-action 'accept'
+set firewall ipv6 name iot-wan-v6 description 'From IOT to WAN'
 
 # From LAN to GUEST
-set firewall ipv6 name lan-guest default-action 'drop'
-set firewall ipv6 name lan-guest description 'From LAN to GUEST'
-set firewall ipv6 name lan-guest default-log
-set firewall ipv6 name lan-guest rule 999 action 'drop'
-set firewall ipv6 name lan-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name lan-guest rule 999 state invalid
-set firewall ipv6 name lan-guest rule 999 log
+set firewall ipv6 name lan-guest-v6 default-action 'drop'
+set firewall ipv6 name lan-guest-v6 description 'From LAN to GUEST'
+set firewall ipv6 name lan-guest-v6 default-log
+set firewall ipv6 name lan-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name lan-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name lan-guest-v6 rule 999 state invalid
+set firewall ipv6 name lan-guest-v6 rule 999 log
 
 # From LAN to IOT
 set firewall ipv6 name lan-iot-v6 default-action 'drop'
@@ -218,17 +218,17 @@ set firewall ipv6 name lan-trusted-v6 rule 999 state invalid
 set firewall ipv6 name lan-trusted-v6 rule 999 log
 
 # From LAN to WAN
-set firewall ipv6 name lan-wan default-action 'accept'
-set firewall ipv6 name lan-wan description 'From LAN to WAN'
+set firewall ipv6 name lan-wan-v6 default-action 'accept'
+set firewall ipv6 name lan-wan-v6 description 'From LAN to WAN'
 
 # From LOCAL to GUEST
-set firewall ipv6 name local-guest default-action 'accept'
-set firewall ipv6 name local-guest description 'From LOCAL to GUEST'
-set firewall ipv6 name local-guest default-log
-set firewall ipv6 name local-guest rule 999 action 'drop'
-set firewall ipv6 name local-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name local-guest rule 999 state invalid
-set firewall ipv6 name local-guest rule 999 log
+set firewall ipv6 name local-guest-v6 default-action 'accept'
+set firewall ipv6 name local-guest-v6 description 'From LOCAL to GUEST'
+set firewall ipv6 name local-guest-v6 default-log
+set firewall ipv6 name local-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name local-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name local-guest-v6 rule 999 state invalid
+set firewall ipv6 name local-guest-v6 rule 999 log
 
 # From LOCAL to IOT
 set firewall ipv6 name local-iot-v6 default-action 'accept'
@@ -320,17 +320,17 @@ set firewall ipv6 name local-trusted-v6 rule 999 state invalid
 set firewall ipv6 name local-trusted-v6 rule 999 log
 
 # From LOCAL to WAN
-set firewall ipv6 name local-wan default-action 'accept'
-set firewall ipv6 name local-wan description 'From LOCAL to WAN'
+set firewall ipv6 name local-wan-v6 default-action 'accept'
+set firewall ipv6 name local-wan-v6 description 'From LOCAL to WAN'
 
 # From SERVERS to GUEST
-set firewall ipv6 name servers-guest default-action 'accept'
-set firewall ipv6 name servers-guest description 'From SERVERS to GUEST'
-set firewall ipv6 name servers-guest default-log
-set firewall ipv6 name servers-guest rule 999 action 'drop'
-set firewall ipv6 name servers-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name servers-guest rule 999 state invalid
-set firewall ipv6 name servers-guest rule 999 log
+set firewall ipv6 name servers-guest-v6 default-action 'accept'
+set firewall ipv6 name servers-guest-v6 description 'From SERVERS to GUEST'
+set firewall ipv6 name servers-guest-v6 default-log
+set firewall ipv6 name servers-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name servers-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name servers-guest-v6 rule 999 state invalid
+set firewall ipv6 name servers-guest-v6 rule 999 log
 
 # From SERVERS to IOT
 set firewall ipv6 name servers-iot-v6 default-action 'accept'
@@ -399,17 +399,17 @@ set firewall ipv6 name servers-trusted-v6 rule 999 state invalid
 set firewall ipv6 name servers-trusted-v6 rule 999 log
 
 # From SERVERS to WAN
-set firewall ipv6 name servers-wan default-action 'accept'
-set firewall ipv6 name servers-wan description 'From SERVERS to WAN'
+set firewall ipv6 name servers-wan-v6 default-action 'accept'
+set firewall ipv6 name servers-wan-v6 description 'From SERVERS to WAN'
 
 # From CONTAINERS to GUEST
-set firewall ipv6 name containers-guest default-action 'drop'
-set firewall ipv6 name containers-guest description 'From CONTAINERS to GUEST'
-set firewall ipv6 name containers-guest default-log
-set firewall ipv6 name containers-guest rule 999 action 'drop'
-set firewall ipv6 name containers-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name containers-guest rule 999 state invalid
-set firewall ipv6 name containers-guest rule 999 log
+set firewall ipv6 name containers-guest-v6 default-action 'drop'
+set firewall ipv6 name containers-guest-v6 description 'From CONTAINERS to GUEST'
+set firewall ipv6 name containers-guest-v6 default-log
+set firewall ipv6 name containers-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name containers-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name containers-guest-v6 rule 999 state invalid
+set firewall ipv6 name containers-guest-v6 rule 999 log
 
 # From CONTAINERS to IOT
 set firewall ipv6 name containers-iot-v6 default-action 'drop'
@@ -469,17 +469,17 @@ set firewall ipv6 name containers-trusted-v6 rule 999 state invalid
 set firewall ipv6 name containers-trusted-v6 rule 999 log
 
 # From CONTAINERS to WAN
-set firewall ipv6 name containers-wan default-action 'accept'
-set firewall ipv6 name containers-wan description 'From CONTAINERS to WAN'
+set firewall ipv6 name containers-wan-v6 default-action 'accept'
+set firewall ipv6 name containers-wan-v6 description 'From CONTAINERS to WAN'
 
 # From TRUSTED to GUEST
-set firewall ipv6 name trusted-guest default-action 'drop'
-set firewall ipv6 name trusted-guest description 'From TRUSTED to GUEST'
-set firewall ipv6 name trusted-guest default-log
-set firewall ipv6 name trusted-guest rule 999 action 'drop'
-set firewall ipv6 name trusted-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name trusted-guest rule 999 state invalid
-set firewall ipv6 name trusted-guest rule 999 log
+set firewall ipv6 name trusted-guest-v6 default-action 'drop'
+set firewall ipv6 name trusted-guest-v6 description 'From TRUSTED to GUEST'
+set firewall ipv6 name trusted-guest-v6 default-log
+set firewall ipv6 name trusted-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name trusted-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name trusted-guest-v6 rule 999 state invalid
+set firewall ipv6 name trusted-guest-v6 rule 999 log
 
 # From TRUSTED to IOT
 set firewall ipv6 name trusted-iot-v6 default-action 'accept'
@@ -526,27 +526,27 @@ set firewall ipv6 name trusted-containers-v6 rule 999 state invalid
 set firewall ipv6 name trusted-containers-v6 rule 999 log
 
 # From TRUSTED to WAN
-set firewall ipv6 name trusted-wan default-action 'accept'
-set firewall ipv6 name trusted-wan description 'From TRUSTED to WAN'
+set firewall ipv6 name trusted-wan-v6 default-action 'accept'
+set firewall ipv6 name trusted-wan-v6 description 'From TRUSTED to WAN'
 
 # From WAN to GUEST
-set firewall ipv6 name wan-guest default-action 'drop'
-set firewall ipv6 name wan-guest description 'From WAN to GUEST'
-set firewall ipv6 name wan-guest default-log
-set firewall ipv6 name wan-guest rule 20 action 'drop'
-set firewall ipv6 name wan-guest rule 20 description 'Drop invalid state'
-set firewall ipv6 name wan-guest rule 20 state invalid
-set firewall ipv6 name wan-guest rule 21 action 'accept'
-set firewall ipv6 name wan-guest rule 21 description 'Rule: accept_ipv6_icmp'
-set firewall ipv6 name wan-guest rule 21 protocol 'ipv6-icmp'
-set firewall ipv6 name wan-guest rule 31 action 'accept'
-set firewall ipv6 name wan-guest rule 31 description 'Rule: accept_ipv6_packet_too_big'
-set firewall ipv6 name wan-guest rule 31 icmpv6 type-name 'packet-too-big'
-set firewall ipv6 name wan-guest rule 31 protocol 'ipv6-icmp'
-set firewall ipv6 name wan-guest rule 999 action 'drop'
-set firewall ipv6 name wan-guest rule 999 description 'Rule: drop_invalid'
-set firewall ipv6 name wan-guest rule 999 state invalid
-set firewall ipv6 name wan-guest rule 999 log
+set firewall ipv6 name wan-guest-v6 default-action 'drop'
+set firewall ipv6 name wan-guest-v6 description 'From WAN to GUEST'
+set firewall ipv6 name wan-guest-v6 default-log
+set firewall ipv6 name wan-guest-v6 rule 20 action 'drop'
+set firewall ipv6 name wan-guest-v6 rule 20 description 'Drop invalid state'
+set firewall ipv6 name wan-guest-v6 rule 20 state invalid
+set firewall ipv6 name wan-guest-v6 rule 21 action 'accept'
+set firewall ipv6 name wan-guest-v6 rule 21 description 'Rule: accept_ipv6_icmp'
+set firewall ipv6 name wan-guest-v6 rule 21 protocol 'ipv6-icmp'
+set firewall ipv6 name wan-guest-v6 rule 31 action 'accept'
+set firewall ipv6 name wan-guest-v6 rule 31 description 'Rule: accept_ipv6_packet_too_big'
+set firewall ipv6 name wan-guest-v6 rule 31 icmpv6 type-name 'packet-too-big'
+set firewall ipv6 name wan-guest-v6 rule 31 protocol 'ipv6-icmp'
+set firewall ipv6 name wan-guest-v6 rule 999 action 'drop'
+set firewall ipv6 name wan-guest-v6 rule 999 description 'Rule: drop_invalid'
+set firewall ipv6 name wan-guest-v6 rule 999 state invalid
+set firewall ipv6 name wan-guest-v6 rule 999 log
 
 # From WAN to IOT
 set firewall ipv6 name wan-iot-v6 default-action 'drop'
