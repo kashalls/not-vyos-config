@@ -1,11 +1,13 @@
 #!/bin/vbash
 
 set firewall ipv6 forward filter default-action 'accept'
+set firewall ipv6 forward filter default-log
 set firewall ipv6 forward filter rule 5 action 'jump'
 set firewall ipv6 forward filter rule 5 inbound-interface name 'eth0'
 set firewall ipv6 forward filter rule 5 jump-target 'WANv6_IN'
 
 set firewall ipv6 input filter default-action 'accept'
+set firewall ipv6 input filter default-log
 set firewall ipv6 input filter rule 5 action 'jump'
 set firewall ipv6 input filter rule 5 inbound-interface name 'eth0'
 set firewall ipv6 input filter rule 5 jump-target 'wan-local'
