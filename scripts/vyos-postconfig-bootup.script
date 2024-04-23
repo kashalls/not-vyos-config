@@ -1,7 +1,7 @@
 #!/bin/sh
-# This script is executed at boot time after VyOS configuration is fully applied.
+# This script is executed at boot time after NotVyOS configuration is fully applied.
 # Any modifications required to work around unfixed bugs
-# or use services not available through the VyOS CLI system can be placed here.
+# or use services not available through the NotVyOS CLI system can be placed here.
 
 if [ -d "/home/kashall" ]; then
 # Add dotfiles for home directory
@@ -11,8 +11,8 @@ if [ -d "/home/kashall" ]; then
 [safe]
   directory = /config
 [user]
-  email = vyos@outsideour.casa
-  name = VyOS
+  email = notvyos@outsideour.casa
+  name = NotVyOS
 END
   chown kashall:users /home/kashall/.gitconfig
 

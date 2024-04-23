@@ -1,7 +1,7 @@
 #!/bin/vbash
 
 # Container networks
-set container network containers description 'Network for VyOS containers'
+set container network containers description 'Network for NotVyOS containers'
 set container network containers prefix '10.5.0.0/24'
 set container network containers prefix 'fdd6:44d4:6900::/64'
 

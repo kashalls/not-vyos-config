@@ -8,7 +8,7 @@
 !/apply-config.sh
 !/LICENSE
 
-# VyOS config
+# NotVyOS config
 !bootstrap/
 !config-parts/
 !containers/

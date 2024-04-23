@@ -15,11 +15,11 @@ set interfaces ethernet eth1 hw-id 'a8:a1:59:c0:3c:33'
 set system login user kashall authentication public-keys personal key 'AAAAC3NzaC1lZDI1NTE5AAAAIPZh6Rn2tQ5jbxP/TJXQTdxFymMuwSySThx/Xv6B40uv'
 set system login user kashall authentication public-keys personal type 'ssh-ed25519'
 
-# delete system login user vyos
+# delete system login user notvyos
 set service ssh disable-password-authentication
 set service ssh port '22'
 
-## Setup VyOS
+## Setup NotVyOS
 delete system host-name
 set system host-name 'dreamweaver'
 set system domain-name 'outsideour.casa'

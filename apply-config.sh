@@ -59,7 +59,7 @@ do
   fi
 done < <(find containers -type f -name "*.tmpl" -print0)
 
-# Include VyOS specific functions and aliases
+# Include NotVyOS specific functions and aliases
 source /opt/vyatta/etc/functions/script-template
 
 # Reset the configuration

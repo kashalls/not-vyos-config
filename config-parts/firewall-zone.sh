@@ -114,7 +114,7 @@ set firewall zone servers from wan firewall ipv6-name 'wan-servers-v6'
 ## Containers
 set firewall zone containers interface 'pod-containers'
 set firewall zone containers default-action 'drop'
-set firewall zone containers description 'VyOS containers zone'
+set firewall zone containers description 'NotVyOS containers zone'
 
 # IPv4
 set firewall zone containers from guest firewall name 'guest-containers'
